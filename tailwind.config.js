@@ -4,7 +4,11 @@ module.exports = {
      "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        'black-ops': ['"Black Ops One"', 'cursive'],
+      }
+    },
   },
   plugins: [require('flowbite/plugin')],
 }

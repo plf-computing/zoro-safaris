@@ -8,10 +8,12 @@ import { PictureComponent } from './homePage/picture/picture.component';
 import { WhyComponent } from './homePage/why/why.component';
 import { SafarisComponent } from './homePage/safaris/safaris.component';
 import { SafariBluComponent } from './homePage/safari-blu/safari-blu.component';
+import { TourExcursionsComponent } from './homePage/tour-excursions/tour-excursions.component';
+import { FooterComponent } from './homePage/footer/footer.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, HeroComponent, DiscoverComponent,PictureComponent,WhyComponent,SafarisComponent,SafariBluComponent],
+  imports: [RouterOutlet, NavbarComponent, HeroComponent, DiscoverComponent,PictureComponent,WhyComponent,SafarisComponent,SafariBluComponent,TourExcursionsComponent,FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
