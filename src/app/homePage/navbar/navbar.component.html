@@ -17,8 +17,8 @@
   </div>
   
     <div (click)="toggleMenu()" class="lg:hidden cursor-pointer">
-        <i class="fa-solid fa-bars fa-3x"  [class.hidden]="isMenuOpen"></i>
-        <i class="fa-solid fa-xmark fa-3x " [class.hidden]="!isMenuOpen"></i>
+        <i class="fa-solid fa-bars fa-2x"  [class.hidden]="isMenuOpen"></i>
+        <i class="fa-solid fa-xmark fa-2x " [class.hidden]="!isMenuOpen"></i>
     </div>
     <div>
         <ul [class]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="lg:hidden absolute left-0 top-28 bg-white w-full h-screen leading-[80px] mt-8 overflow-y-auto px-6 py-6 z-50 font-bold text-blue-900 text-2xl">
