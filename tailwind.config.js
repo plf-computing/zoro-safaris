@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       fontFamily:{
         'black-ops': ['"Black Ops One"', 'cursive'],
-      }
+      },
+    
+
     },
   },
   plugins: [require('flowbite/plugin')],
