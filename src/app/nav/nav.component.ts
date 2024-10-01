@@ -1,16 +1,14 @@
-
-import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-nav',
   standalone: true,
-  imports: [RouterLink,NgIf],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  imports: [RouterLink],
+  templateUrl: './nav.component.html',
+  styleUrl: './nav.component.css'
 })
-export class NavbarComponent {
+export class NavComponent {
   isMenuOpen = false;
 
   toggleMenu() {
