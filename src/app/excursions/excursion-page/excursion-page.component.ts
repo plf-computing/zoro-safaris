@@ -1,12 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {   RouterLink } from '@angular/router';
+import { ExcursionService } from '../excursion.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-excursion-page',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './excursion-page.component.html',
   styleUrl: './excursion-page.component.css'
 })
-export class ExcursionPageComponent {
+export class ExcursionPageComponent implements OnInit {
+  
+  constructor(private excService:ExcursionService){}
+  excursions: any[] = [];
+  
+  
 
+  ngOnInit(): void {  
+    this.excursions = this.excService.getExcursions(); 
+    
+   
+   
+  }
 }
+

@@ -1,0 +1,79 @@
+<div class="container mx-auto mt-24 w-full bg-blue-100">
+    <div class="flex flex-col justify-between gap-6 lg:gap-0  lg:grid lg:grid-cols-12 p-2">
+        <div *ngIf="excursions" class="lg:p-2 lg:col-start-2 lg:col-span-6  ">
+            <p class="text-5xl font-bold font-serif pb-4 text-red-600">{{excursions.title}}</p>
+            <p class="leading-8 font-normal text-lg">{{excursions.description}}</p>
+        </div>
+        <div class="flex flex-col justify-between  lg:col-start-9 lg:col-end-12 ">
+            <p class=" font-semibold text-2xl text-red-600">EXCURSION DETAILS</p>
+            <div class="flex flex-col leading-10 font-medium text-lg">
+                <p>Departure:Watamu</p>
+                <p>Dates: Available everyday
+                    (from July to March)</p>
+                <p>Time: Departure time 9:00 AM</p>
+                <p>Participants:no limits</p>
+                <p>Duration:1 day</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col justify-between lg:grid lg:grid-cols-12 pb-2">
+        <div class="lg:col-span-6 lg:pl-20">
+            <img class="" src="../../../assets/safaris/sardegna2.jpg" alt="">
+        </div>
+        <div class="lg:col-start-9 lg:col-end-12 flex items-start flex-col bg-blue-200 border px-2 py-2 lg:w-[310px]">
+            <p class="text-blue-900 text-2xl font-semibold font-serif pb-4">REQUEST A QUOTE</p>
+            <div class="flex flex-row gap-2">
+                <input class="w-36 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Adults">
+                <input class="w-36 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Children" >
+            </div>
+            <div class="mt-2 flex flex-col gap-0">
+                <label class="text-slate-900 text-xl font-normal" for="">INTERESTED IN</label>
+                <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class=" w-[295px] text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Choose <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                    </button>
+            </div>
+                <!-- Dropdown menu -->
+                <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+        <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+          </li>
+          <li>
+            <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+          </li>
+        </ul>
+                </div>
+    
+            <div class="mt-4 flex flex-col">
+                <p class="text-slate-900 text-xl font-normal">DEPARTURE DAY</p>
+                <div class="relative w-[295px]">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+       <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+        </svg>
+                    </div>
+                    <input id="datepicker-autohide" datepicker datepicker-autohide type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="dd-mm-yy">
+                </div>
+  
+            </div>
+            <input class="mt-4 w-[295px] rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Phone">
+            <input class="mt-4 w-[295px] rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="email" placeholder="Email">
+
+            <!-- <div class="flex items-center mb-4 mt-4 ">
+                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the treatment of my personal information</label>
+            </div> -->
+            <button type="button" class=" mt-4 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">REQUEST A QUOTE</button>
+           
+        </div>
+    </div>
+</div>
+

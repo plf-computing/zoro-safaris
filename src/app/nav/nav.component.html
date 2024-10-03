@@ -5,11 +5,11 @@
         </a>
     </div>
   <div>
-    <ul  class="lg:flex  lg:items-center lg:space-x-10 lg:font-medium lg:text-xl hidden text-blue-900">
-        <li routerLink="home">HOME</li>
-        <li routerLink="safaris">SAFARIS & TOURS</li>
-        <li routerLink="excursions">EXCURSIONS</li>
-        <li routerLink="about-us">ABOUT US</li>
+    <ul  class="lg:flex  lg:items-center lg:space-x-10 lg:font-medium lg:text-xl hidden text-blue-900 cursor-pointer">
+        <li routerLink="home" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}">HOME</li>
+        <li routerLink="safaris" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}">SAFARIS & TOURS</li>
+        <li routerLink="excursions" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}">EXCURSIONS</li>
+        <li routerLink="about-us" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}">ABOUT US</li>
     </ul>
     
   </div>

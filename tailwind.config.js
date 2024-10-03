@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily:{
         'black-ops': ['"Black Ops One"', 'cursive'],
+        'spicy-rice-regular':['"Spicy Rice"', 'serif']
       },
     
 

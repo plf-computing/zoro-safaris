@@ -4,6 +4,7 @@ import { SafarisToursComponent } from './safaris-tours/safaris-tours.component';
 import { ExcursionsComponent } from './excursions/excursions.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BookNowComponent } from './book-now/book-now.component';
+import { ExcursionDetailsComponent } from './excursions/excursion-details/excursion-details.component';
 
 
 export const routes: Routes = [
@@ -19,6 +20,8 @@ export const routes: Routes = [
     {
         path:'excursions', component:ExcursionsComponent
     },
+    { 
+        path: 'excursion/:id', component: ExcursionDetailsComponent }, 
     {
         path:'about-us',component:AboutUsComponent
     },
