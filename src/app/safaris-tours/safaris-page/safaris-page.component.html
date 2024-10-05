@@ -15,8 +15,8 @@
     </div>
     <div class="bg-amber-800 bg-opacity-20 pt-8 pb-8 ">
         @for (item of safaris; track item.id) {
-            <div class=" mx-12 flex flex-col md:flex-row md:gap-4 bg-yellow-500 bg-opacity-60 items-start pl-4 pb-4 md:pl-0 md:pb-0 mt-6">
-                <img class="w-80 h-72 md:w-96 md:h-72 p-4" src="{{item.image}}" alt="">
+            <div class="  w-full  flex flex-col md:flex-row md:gap-4 bg-yellow-500 bg-opacity-60 items-start pl-8 pt-8 md:pl-0 md:pb-0 mt-6">
+                <img class="w-80 h-72 md:w-96 md:h-72 pt-2" src="{{item.image}}" alt="">
                <div class="flex flex-col md:gap-4 pt-6 md:pb-4">
                 <p class="font-pt-serif-regular text-4xl font-bold text-amber-900">{{item.title}}</p>
                 <p class=" text-2xl md:text-3xl text-red-600 font-bold font-pt-serif-regular"> {{item.title2}}</p>
