@@ -7,7 +7,10 @@ module.exports = {
     extend: {
       fontFamily:{
         'black-ops': ['"Black Ops One"', 'cursive'],
-        'spicy-rice-regular':['"Spicy Rice"', 'serif']
+        'spicy-rice-regular':['"Spicy Rice"', 'serif'],
+        'poppins-regular':['"Poppins"', 'sans-serif'],
+        'pt-serif-regular':['"PT Serif"', 'serif']
+        
       },
     
 

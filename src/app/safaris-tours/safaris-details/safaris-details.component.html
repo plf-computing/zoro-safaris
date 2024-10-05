@@ -1,11 +1,13 @@
-<div class="container mx-auto mt-24 w-full bg-blue-100">
+<div class=" mt-24 w-full bg-amber-900 bg-opacity-40">
     <div class="flex flex-col justify-between gap-6 lg:gap-0  lg:grid lg:grid-cols-12 p-2">
-        <div *ngIf="excursions" class="lg:p-2 lg:col-start-2 lg:col-span-6  ">
-            <p class="text-5xl font-bold font-serif pb-4 text-red-600">{{excursions.title}}</p>
-            <p class="leading-8 font-normal text-lg">{{excursions.description}}</p>
+        <div *ngIf="safaris" class="lg:p-2 lg:col-start-2 lg:col-span-6  ">
+            <p class="text-4xl font-bold font-serif pb-4 text-red-600">{{safaris.title}}</p>
+            <p class="text-3xl font-bold font-serif pb-4 text-red-600">{{safaris.title2}}</p>
+            <p class="leading-8 font-normal text-lg">{{safaris.description2}}</p>
+            <!-- <p class="leading-8 font-normal text-lg pt-2">{{safaris.description2}}</p> -->
         </div>
         <div class="flex flex-col justify-between  lg:col-start-9 lg:col-end-12 ">
-            <p class=" font-semibold text-2xl text-red-600">EXCURSION DETAILS</p>
+            <p class=" font-semibold text-2xl text-red-600">SAFARI DETAILS</p>
             <div class="flex flex-col leading-10 font-medium text-lg">
                 <p>Departure:Watamu</p>
                 <p>Dates: Available everyday
@@ -19,9 +21,9 @@
     </div>
     <div class="flex flex-col justify-between lg:grid lg:grid-cols-12 pb-2">
         <div class="lg:col-span-6 lg:pl-20">
-            <img class="" src="../../../assets/safaris/sardegna2.jpg" alt="">
+            <img class="" src="../../../assets/safari/IMG-20241004-WA0025.jpg" alt="">
         </div>
-        <div class="lg:col-start-9 lg:col-end-12 flex items-start flex-col bg-blue-200 border pl-2 pr-2 py-2 ">
+        <div class="lg:col-start-9 lg:col-end-12 flex items-start flex-col bg-yellow-600 bg-opacity-50 border border-yellow-600 pl-2 pr-2 py-2 ">
             <p class="text-blue-900 text-2xl font-semibold font-serif pb-4">REQUEST A QUOTE</p>
             <div class="flex flex-row gap-2">
                 <input class="w-36 lg:w-28 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Adults">

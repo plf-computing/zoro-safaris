@@ -5,6 +5,7 @@ import { ExcursionsComponent } from './excursions/excursions.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { BookNowComponent } from './book-now/book-now.component';
 import { ExcursionDetailsComponent } from './excursions/excursion-details/excursion-details.component';
+import { SafarisDetailsComponent } from './safaris-tours/safaris-details/safaris-details.component';
 
 
 export const routes: Routes = [
@@ -17,6 +18,9 @@ export const routes: Routes = [
     {
         path:'safaris',component:SafarisToursComponent
     },
+    { 
+        path: 'safaris/:id', component: SafarisDetailsComponent }, 
+    
     {
         path:'excursions', component:ExcursionsComponent
     },

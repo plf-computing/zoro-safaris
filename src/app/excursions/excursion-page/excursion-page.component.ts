@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {   RouterLink } from '@angular/router';
+import {   RouterLink, RouterLinkActive } from '@angular/router';
 import { ExcursionService } from '../excursion.service';
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-excursion-page',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,RouterLinkActive],
   templateUrl: './excursion-page.component.html',
   styleUrl: './excursion-page.component.css'
 })
