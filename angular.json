@@ -25,12 +25,12 @@
     
             ],
             "styles": [
-              "node_modules/flowbite/dist/flowbite.css",
-              "@angular/material/prebuilt-themes/azure-blue.css",
-              "src/styles.css"
+              "src/styles.css",
+              "@angular/material/prebuilt-themes/azure-blue.css"
+              
             ],
             "scripts": [
-              "node_modules/flowbite/dist/flowbite.js"
+              
             ]
           },
           "configurations": {
