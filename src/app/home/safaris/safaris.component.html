@@ -4,7 +4,7 @@
             <p class="md:text-5xl text-3xl text-blue-900">TOP SAFARIS PACKAGES</p>
         </div>
         <div class="flex flex-col md:flex-row justify-center gap-4 items-center">
-            <div class="max-w-sm md:w-80 bg-white shadow-2xl">
+            <div class="max-w-sm md:w-72 lg:w-80 xl:w-96 bg-white shadow-2xl p-2">
                 <a>
                     <img class="rounded-t-lg object-contain" src="../../../assets/wb.gif" alt="" />
                 </a>
@@ -13,19 +13,17 @@
                         <h5 class="mb-2 text-2xl font-medium tracking-tight text-slate-500 dark:text-white">Maasai Mara</h5>
                     </a>
                     <p class="mb-3  text-gray-700 dark:text-gray-400 font-light">At Zoro Safaris, we specialize in providing unforgettable tours to Masai Mara, one of the greatest national parks in the world. Our team of expert drivers and wildlife guides ensure that our clients have access to the most incredible sights and top-quality service during their tours. We work hard to create an experience that will stay with you for a lifetime.</p>
-                   <div class="flex justify-between">
-                    <a  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        View Itenary    
+                   <div class="flex justify-center items-center">
+                    <a (click)="goToSafari(6)"  class="  inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-red-600 cursor-pointer focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+                        View More <i class="fa-solid fa-arrow-right  pl-2"></i>    
                     </a>
-                    <a  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 ">
-                        Book Now    
-                    </a>
+                    
                    </div>
                   
                    
                 </div>
             </div>
-            <div class="max-w-sm md:w-80 bg-white shadow-2xl">
+            <div class="max-w-sm md:w-72 lg:w-80 xl:w-96 bg-white shadow-2xl">
                 <a>
                     <img class="rounded-t-lg object-contain" src="../../../assets/herd.gif" alt="" />
                 </a>
@@ -34,19 +32,16 @@
                         <h5 class="mb-2 text-2xl font-medium tracking-tight text-slate-500 dark:text-white">Tsavo East</h5>
                     </a>
                     <p class="mb-3  text-gray-700 dark:text-gray-400 font-light">Tsavo East national park is a treasure trove of wildlife, with an incredible array of species that will leave you in awe. That's why at Zoro Safaris, we have created a range of tours that allow you to experience the very best of the park. Our tours cater to all levels of experience and interest, With our expert guides and state-of-the-art equipment, we'll make sure you get the most out of your safari.</p>
-                   <div class="flex justify-between">
-                    <a  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        View Itenary    
-                    </a>
-                    <a  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 ">
-                        Book Now    
+                   <div class="flex justify-center">
+                    <a routerLink="/safaris"   class=" inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+                        View More <i class="fa-solid fa-arrow-right  pl-2"></i>    
                     </a>
                    </div>
                   
                    
                 </div>
             </div>
-            <div class="max-w-sm md:w-80 bg-white shadow-2xl">
+            <div class="max-w-sm md:w-72 lg:w-80 lg:gap-8 xl:w-96 bg-white shadow-2xl">
                 <a>
                     <img class="rounded-t-lg object-contain" src="../../../assets/leopard.gif" alt="" />
                 </a>
@@ -55,12 +50,9 @@
                         <h5 class="mb-2 text-2xl font-medium tracking-tight text-slate-500 dark:text-white">Amboseli</h5>
                     </a>
                     <p class="mb-3  text-gray-700 dark:text-gray-400 font-light">For an exceptional and unforgettable vacation experience, come explore the untamed beauty of Amboseli National Park with Zoro Safaris! Our packages tailor-made to cater to various safari needs. Experience the rolling Sahara sands, the lush savannah, and the endless plains of wild Tsavo West National Park all from the comfort of our expertly guided tours. Book now and let's explore nature together!</p>
-                   <div class="flex justify-between">
-                    <a  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        View Itenary    
-                    </a>
-                    <a  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 ">
-                        Book Now    
+                   <div class="flex justify-center">
+                    <a routerLink="/safaris"   class="  inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
+                        View More <i class="fa-solid fa-arrow-right  pl-2"></i>    
                     </a>
                    </div>
                   
@@ -70,8 +62,8 @@
     
     </div>
     <div>
-        <a  class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-red-300 ">
-            VIEW MORE   
+        <a routerLink="/safaris"  class="inline-flex items-center px-3 py-2 text-xl font-medium text-center text-white bg-purple-700 rounded-lg hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-red-300 ">
+            MORE SAFARIS <i class="fa-solid fa-arrow-right pl-2"></i>  
         </a>
 
     </div>
