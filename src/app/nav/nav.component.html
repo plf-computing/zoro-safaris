@@ -6,10 +6,10 @@
     </div>
   <div>
     <ul  class="lg:flex  lg:items-center lg:space-x-10 lg:font-medium lg:text-xl hidden text-blue-900 cursor-pointer">
-        <li routerLink="home" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}">HOME</li>
-        <li routerLink="safaris" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}">SAFARIS & TOURS</li>
-        <li routerLink="excursions" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}">EXCURSIONS</li>
-        <li routerLink="about-us" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}">ABOUT US</li>
+        <li routerLink="home" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">HOME</li>
+        <li routerLink="safaris" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">SAFARIS & TOURS</li>
+        <li routerLink="excursions" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">EXCURSIONS</li>
+        <li routerLink="about-us" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">ABOUT US</li>
     </ul>
     
   </div>
@@ -17,16 +17,16 @@
     <button  routerLink="book" type="button" class=" hidden lg:block text-white bg-blue-900 hover:bg-blue-950 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-2xl px-2 py-1 me-2 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Book Now</button>
   </div>
   
-    <div (click)="toggleMenu()" class="lg:hidden cursor-pointer absolute right-4">
-        <i class="fa-solid fa-bars fa-2x"  [class.hidden]="isMenuOpen"></i>
-        <i class="fa-solid fa-xmark fa-2x " [class.hidden]="!isMenuOpen"></i>
+    <div (click)="toggleMenu()" class=" bg-blue-500 hover:bg-blue-700 text-white bg-opacity-65 rounded-lg lg:hidden cursor-pointer absolute right-4">
+        <i class="fa-solid fa-bars fa-2x p-2  z-50"  [class.hidden]="isMenuOpen"></i>
+        <i class="fa-solid fa-xmark fa-2x p-2" [class.hidden]="!isMenuOpen"></i>
     </div>
     <div (click)="onLinkClick()">
-        <ul [class]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class="lg:hidden absolute left-0 top-16 bg-white w-full h-screen leading-[80px] mt-8 px-6 py-6 z-50 font-bold text-blue-900 text-xl">
+        <ul [class]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class=" cursor-pointer lg:hidden absolute left-0 top-16 bg-white w-full h-screen leading-[80px] mt-8 px-6 py-6 z-50 font-bold text-blue-700  text-xl">
             
-            <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="safaris">SAFARIS & TOURS</li>
-            <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="excursions">EXCURSIONS</li>
-            <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="about-us">ABOUT US</li>
+            <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="safaris" class="hover:text-red-600">SAFARIS & TOURS</li>
+            <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="excursions" class="hover:text-red-600">EXCURSIONS</li>
+            <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="about-us" class="hover:text-red-600">ABOUT US</li>
             <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="book"> <button type="button" class="text-white bg-blue-900 hover:bg-blue-950 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-2xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Book Now</button></li>
         </ul>
 
