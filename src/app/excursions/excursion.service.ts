@@ -55,7 +55,7 @@ export class ExcursionService {
       image:'../../../assets/safaris/Diani.jpg',
       title:'DIANI (SOUTH COAST)',
       duration:'ONE DAY TOUR',
-      description:'Diani is the third tourist town on the Kenyan coast. Destination especial prefered by the British people, located south of Mombasa, you can reach by air or by land through the channel connecting the island',
+      description:'Diani is the third tourist town on the Kenyan coast. Destination especially prefered by the British people, located south of Mombasa, you can reach by air or by land through the channel connecting the island',
       type:'Beach'
     },
     {
