@@ -8,9 +8,6 @@ interface Safari{
   description:string;
   description2:string
 }
-
-
-
 @Injectable({
   providedIn: 'root'
 })
