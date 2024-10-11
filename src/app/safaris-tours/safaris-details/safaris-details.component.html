@@ -3,10 +3,10 @@
         <div *ngIf="safaris" class="lg:p-2 lg:col-start-2 lg:col-span-6  ">
             <p class="text-4xl font-bold font-serif pb-4 text-yellow-800">{{safaris.title}}</p>
             <p class="text-3xl font-bold font-serif pb-4 text-yellow-700">{{safaris.title2}}</p>
-            <p class="leading-8 font-normal text-lg">{{safaris.description2}}</p>
+            <p [innerHTML]="safaris.description2" class="leading-8 font-normal text-base opacity-70">{{safaris.description2}}</p>
             <!-- <p class="leading-8 font-normal text-lg pt-2">{{safaris.description2}}</p> -->
         </div>
-        <div class="flex flex-col justify-between  lg:col-start-9 lg:col-end-12 ">
+        <!-- <div class="flex flex-col justify-between  lg:col-start-9 lg:col-end-12 ">
             <p class=" font-semibold text-2xl text-yellow-800">SAFARI DETAILS</p>
             <div class="flex flex-col leading-10 font-medium text-lg">
                 <p>Departure:Watamu</p>
@@ -17,7 +17,7 @@
                 <p>Duration:1 day</p>
 
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="flex flex-col lg:flex-row justify-between ">
        
@@ -51,6 +51,19 @@
            
         </div>
     </div>
+  <div *ngIf="safariItenaries">
+    <p>{{safariItenaries.name}}</p>
+   
+   
+  </div>
+    
+   
+
+
+
+
+
+
     <div class="grid grid-rows-1 md:grid-cols-3 lg:mx-36 gap-4 pl-6 md:pl-2 pt-4">
         <!-- Column 1 -->
         <div class="grid grid-rows-[auto,auto,1fr] gap-2">
