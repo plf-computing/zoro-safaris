@@ -17,33 +17,41 @@ export class SafarisDetailsComponent implements OnInit {
 
   safaris:any;
   safariItenaries:any
+  images:string[]=[
+    '../../../assets/safari/IMG-20241004-WA0025.jpg',
+    '../../../assets/safari/IMG-20241004-WA0033.jpg',
+    '../../../assets/safari/IMG-20241004-WA0016.jpg'
+  ]
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id'); // Get the ID from the route
     if (id) {
       this.safaris= this.safariService.getSafaris().find(e => e.id === +id); 
       this.loadItinerary();
-      console.log('Itinerary:', this.safariItenaries)
-      // this.safariItenaries = this.safariService.getAllSafarisItenaries();
-      // console.log('irenary',this.safariItenaries)
+      // console.log('Itinerary:', this.safariItenaries)
+      
       
     }
-    // if (this.safaris) {
-    //   this.safariItenaries = this.safariService.getAllSafarisItenaries().find(i => i.name === this.safaris.title);
-    // }
-
-    // console.log('Itinerary:', this.safariItenaries); // Make sure this shows the right data
+  
   }
   loadItinerary():void{
     if(this.safaris){
       this.safariItenaries = this.safariService.getAllSafarisItenaries().find(i =>i.name === this.safaris.title)
     }
   }
-    // if (!this.safaris) {
-    //   console.error('Safari not found for id:', id);
-    // }
+
+  getNumberOfImages() {
+    const duration = this.safariItenaries?.duration;
+    if (duration === 3 || duration === 4) {
+      return 1; 
+    } else if (duration === 6) {
+      return 2; 
+    } else if (duration === 7) {
+      return 3; 
+    }
+    return 0; 
+  }
    
-    // window.scrollTo(0, 0);
   }
   
 

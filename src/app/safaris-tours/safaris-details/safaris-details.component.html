@@ -4,7 +4,7 @@
             <p class="text-4xl font-bold font-serif pb-4 text-yellow-800">{{safaris.title}}</p>
             <p class="text-3xl font-bold font-serif pb-4 text-yellow-700">{{safaris.title2}}</p>
             <p [innerHTML]="safaris.description2" class="leading-8 font-normal text-base opacity-70">{{safaris.description2}}</p>
-            <!-- <p class="leading-8 font-normal text-lg pt-2">{{safaris.description2}}</p> -->
+           
         </div>
         <!-- <div class="flex flex-col justify-between  lg:col-start-9 lg:col-end-12 ">
             <p class=" font-semibold text-2xl text-yellow-800">SAFARI DETAILS</p>
@@ -19,43 +19,64 @@
             </div>
         </div> -->
     </div>
-    <div class="flex flex-col lg:flex-row justify-between ">
-       
-        <div class="flex items-start flex-col bg-yellow-800 bg-opacity-40   pl-2 pr-2 py-2 ">
-            <p class="text-white text-2xl font-semibold font-serif pb-4">REQUEST A QUOTE</p>
-            <div class="flex flex-row gap-2">
-                <input class=" w-1/2 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Adults">
-                <input class=" w-1/2  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Children" >
-            </div>
-           
-              
-              <div class="mt-4 flex flex-col">
-                <p class="text-slate-900 text-xl font-normal" >INTERESTED IN</p>
-                <input class="mt-4 w-fit  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Choose excursion...">
-              </div>
-               
-    
-            <div class="mt-4 flex flex-col">
-                <p class="text-slate-900 text-xl font-normal">DEPARTURE DAY</p>
-                <input class="mt-4   rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="date" name="departure" id="" placeholder="dd-mm-yyyy">
-  
-            </div>
-            <input class="mt-5  rounded-lg w-2/3 focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Phone">
-            <input class="mt-4 w-2/3 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="email" placeholder="Email">
-
-            <!-- <div class="flex items-center mb-4 mt-4 ">
-                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the treatment of my personal information</label>
-            </div> -->
-            <button type="button" class=" mt-4 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">REQUEST A QUOTE</button>
-           
+    <div class="flex flex-col lg:grid lg:grid-cols-12 justify-between gap-2">
+      
+      <div class="lg:col-end-8 lg:col-start-2 p-2" *ngIf="safariItenaries">
+        <p class="md:pl-80 lg:pl-52 text-3xl text-yellow-800 font-serif font-semibold">ITINERARY</p>
+        <p class="pb-6 md:pl-80 lg:pl-52 text-3xl text-yellow-800 font-serif font-semibold" >{{safariItenaries.name}}</p>
+        <div *ngIf="safariItenaries.days && safariItenaries.days.length > 0">
+          <div  *ngFor="let day of safariItenaries.days">
+            <p class="text-lg text-red-800 font-medium">{{day.day}}</p>
+            <p class="text-2xl text-black font-semibold">{{day.location}}</p>
+            <p class="text-sm opacity-70 leading-8" [innerHTML]="day.description">{{day.description}}</p>
+            
+          </div>
+          <p ><span class="text-sm opacity-70" [innerHTML]="safariItenaries.notes">{{safariItenaries.notes}}</span></p>
         </div>
+       
+       
+      </div>
+      <div class="flex items-start flex-col lg:col-start-9 lg:col-span-4 ">
+        <div class=" bg-slate-300  h-[760px]  pt-4 pb-10 pl-10 md:pl-6 lg:pr-2 pr-2">
+          <p class="text-white text-2xl font-semibold font-serif pt-2">REQUEST A QUOTE</p>
+          <div class="flex flex-row gap-2">
+              <input class=" w-1/2 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Adults">
+              <input class=" w-1/2  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Children" >
+          </div>
+         
+            
+            <div class="mt-4 flex flex-col gap-0">
+              <p class=" text-xl font-normal" >Interested In</p>
+              <input class="mt-4 w-fit  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Choose excursion...">
+            </div>
+             
+  
+          <div class="mt-4 flex flex-col">
+              <p class=" text-xl font-normal">Departure Day</p>
+              <input class="mt-4   rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="date" name="departure" id="" placeholder="dd-mm-yyyy">
+
+          </div>
+          <input class="mt-5  rounded-lg w-2/3 focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Phone">
+          <input class="mt-4 w-2/3 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="email" placeholder="Email">
+          <p class=" text-xl font-normal pt-4">Message</p>
+          <textarea class=" w-full h-20 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" name="message" id=""></textarea>
+
+          <!-- <div class="flex items-center mb-4 mt-4 ">
+              <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+              <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the treatment of my personal information</label>
+          </div> -->
+          <button type="button" class=" mt-4 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">REQUEST A QUOTE</button>
+         
+      </div>
+      <div class=" hidden  mt-4 lg:flex lg:flex-col gap-4 ">
+        <img *ngIf="getNumberOfImages() >= 1" class="" [src]="images[0]" alt="Safari Image">
+        <img *ngIf="getNumberOfImages() >= 2" class="" [src]="images[1]" alt="Safari Image">
+        <img *ngIf="getNumberOfImages() >= 3" class="" [src]="images[2]" alt="Safari Image">
+      </div>
+      </div>
+      
     </div>
-  <div *ngIf="safariItenaries">
-    <p>{{safariItenaries.name}}</p>
-   
-   
-  </div>
+ 
     
    
 

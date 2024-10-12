@@ -15,13 +15,13 @@
     </div>
     <div class=" pt-1 md:pt-8 pb-8 ">
         @for (item of safaris; track item.id) {
-            <div class="  w-full flex flex-col md:flex-row md:gap-4 bg-yellow-800 bg-opacity-20 items-start pl-8 pt-8 pb-6 md:pl-2 md:pb-0 mt-6">
-                <img class="w-80 h-72 md:w-96 md:h-72 pt-2 pl-2" src="{{item.image}}" alt="">
-               <div class="flex flex-col md:gap-4 pt-6 md:pb-4">
+            <div class="  w-full flex flex-col md:grid md:grid-cols-12  bg-slate-300 items-start pl-8 pt-8 pb-6 md:pl-2 md:pb-0 mt-6">
+                <img class=" w-96 h-[420px] object-cover md:col-span-5 lg:col-span-4  pt-2 pl-2 pb-2" src="{{item.image}}" alt="">
+               <div class="flex flex-col  md:col-span-7 lg:col-span-8 md:col-start-7 lg:pl-4 pt-6 md:pb-4">
                 <p class="font-pt-serif-regular text-4xl font-bold text-amber-900">{{item.title}}</p>
                 <p class=" text-2xl md:text-3xl text-red-600 font-bold font-pt-serif-regular"> {{item.title2}}</p>
                 <p class="text-lg pt-4 md-pt-0">{{item.description}}</p>
-               <div class="pt-2">
+               <div class=" pt-2 md:pt-20">
                 <a [routerLink]="['/safaris', item.id]" routerLinkActive="text-red-600" class="w-36  inline-flex items-center px-3 py-2 text-base font-medium text-center text-white bg-red-600 rounded hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
                     Read More
                      <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
