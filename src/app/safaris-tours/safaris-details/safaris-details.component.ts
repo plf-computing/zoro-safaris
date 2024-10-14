@@ -2,29 +2,44 @@ import { Component, OnInit } from '@angular/core';
 import { SafarisService } from '../safaris.service';
 import { ActivatedRoute } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-safaris-details',
   standalone: true,
-  imports: [NgIf,NgFor],
+  imports: [NgIf,NgFor,ReactiveFormsModule],
   templateUrl: './safaris-details.component.html',
   styleUrl: './safaris-details.component.css'
 })
 export class SafarisDetailsComponent implements OnInit {
-
-
-  constructor(private safariService:SafarisService,private route: ActivatedRoute){}
-
-  safaris:any;
-  safariItenaries:any
+ quoteForm : FormGroup;
+ safaris:any
+ allSafaris:any
+ safariItenaries:any
   images:string[]=[
     '../../../assets/safari/IMG-20241004-WA0025.jpg',
     '../../../assets/safari/IMG-20241004-WA0033.jpg',
     '../../../assets/safari/IMG-20241004-WA0016.jpg'
   ]
 
+  constructor(private fb: FormBuilder,private safariService:SafarisService,private route: ActivatedRoute){
+    this.quoteForm = this.fb.group({
+      adults: ['', Validators.required],
+      children: [''],
+      safari: ['', Validators.required],
+      departure: ['', Validators.required],
+      phone: ['', [Validators.required, Validators.pattern('^[0-9]{10,12}$')]],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['']
+    });
+  }
+
+  
+  
+
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id'); // Get the ID from the route
+    const id = this.route.snapshot.paramMap.get('id'); 
+  this.allSafaris = this.safariService.getSafaris();
     if (id) {
       this.safaris= this.safariService.getSafaris().find(e => e.id === +id); 
       this.loadItinerary();
@@ -50,6 +65,12 @@ export class SafarisDetailsComponent implements OnInit {
       return 3; 
     }
     return 0; 
+  }
+
+    onSubmit() {
+    if (this.quoteForm.valid) {
+      console.log(this.quoteForm.value);  // Handle form submission
+    }
   }
    
   }
