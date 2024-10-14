@@ -2,13 +2,14 @@ import {  Component, OnInit } from '@angular/core';
 import { ExcursionService } from '../excursion.service';
 import { ActivatedRoute } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { ExcursionQuotationComponent } from "../../quotation/excursion-quotation/excursion-quotation.component";
 
 
 
 @Component({
   selector: 'app-excursion-details',
   standalone: true,
-  imports: [NgIf],
+  imports: [NgIf, ExcursionQuotationComponent],
   templateUrl: './excursion-details.component.html',
   styleUrl: './excursion-details.component.css'
 })

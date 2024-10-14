@@ -1,0 +1,49 @@
+
+<form [formGroup]="quoteForm" (ngSubmit)="onSubmit()"   class=" bg-slate-300  h-[760px]  pt-4 pb-10 pl-6 md:pl-6 lg:pr-2 pr-4">
+    <p class="text-yellow-800 text-2xl font-semibold font-serif pt-2">REQUEST A QUOTE</p>
+    <div class="flex flex-row gap-2">
+        <input id="adults" formControlName="adults" class=" w-1/2 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Adults">
+        <div *ngIf="quoteForm.get('adults')?.invalid && (quoteForm.get('adults')?.touched || quoteForm.get('adults')?.dirty)" class="text-red-500 text-sm">
+          <p *ngIf="quoteForm.get('adults')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill this field</p>
+        </div>
+        <input id="children" formControlName="children" class=" w-1/2  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Children" >
+        <div *ngIf="quoteForm.get('children')?.invalid && (quoteForm.get('children')?.touched || quoteForm.get('children')?.dirty)" class="text-red-500 text-sm">
+          <p *ngIf="quoteForm.get('children')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill this field</p>
+        </div>
+    </div>
+ 
+   
+   
+      
+    <div class="mt-4 flex flex-col gap-0">
+      <p class="text-xl font-normal">Interested In</p>
+      <select formControlName="safari" class="mt-4 w-full md:w-2/3 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
+        <option value="" disabled selected>Choose safari</option> 
+        <option *ngFor="let safari of allSafaris" [value]="safari.title2">{{safari.title}}:{{ safari.title2 }}</option>
+      </select>
+      <div *ngIf="quoteForm.get('safari')?.invalid && (quoteForm.get('safari')?.touched || quoteForm.get('safari')?.dirty)" class="text-red-500 text-sm">
+        <p *ngIf="quoteForm.get('safari')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please choose a safari.</p>
+      </div>
+    </div>
+    
+    
+       
+
+    <div class="mt-4 flex flex-col">
+        <p class=" text-xl font-normal">Departure Day</p>
+        <input id="departure" formControlName="departure" class="mt-4   rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="date" name="departure" id="" placeholder="dd-mm-yyyy">
+        <div *ngIf="quoteForm.get('departure')?.invalid && (quoteForm.get('departure')?.touched || quoteForm.get('departure')?.dirty)" class="text-red-500 text-sm">
+          <p *ngIf="quoteForm.get('departure')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please enter departure date.</p>
+        </div>
+    </div>
+    <input id="phone" formControlName="phone" class="mt-5  rounded-lg w-full md:w-2/3 focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Phone no: +123 456 789 0123">
+    
+    <input id="email" formControlName="email" class="mt-4 w-full md:w-2/3 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="email" placeholder="Email">
+    <div *ngIf="quoteForm.get('email')?.invalid && (quoteForm.get('email')?.touched || quoteForm.get('email')?.dirty)" class="text-red-500 text-sm">
+      <p *ngIf="quoteForm.get('email')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please ensure the email is valid</p>
+    </div>
+    <p class=" text-xl font-normal pt-4">Message</p>
+    <textarea formControlName="message" class=" w-full h-20 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" name="message" id=""></textarea>
+    <button type="submit" class=" mt-4 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">REQUEST A QUOTE</button>
+   
+  </form>

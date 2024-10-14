@@ -4,7 +4,7 @@
             <p class="text-5xl font-bold font-serif pb-4 text-red-600">{{excursions.title}}</p>
             <p class="leading-8 font-normal text-lg">{{excursions.description}}</p>
         </div>
-        <div class="flex flex-col justify-between  lg:col-start-9 lg:col-end-12 ">
+        <!-- <div class="flex flex-col justify-between  lg:col-start-9 lg:col-end-12 ">
             <p class=" font-semibold text-2xl text-red-600">EXCURSION DETAILS</p>
             <div class="flex flex-col leading-10 font-medium text-lg">
                 <p>Departure:Watamu</p>
@@ -15,43 +15,13 @@
                 <p>Duration:1 day</p>
 
             </div>
-        </div>
+        </div> -->
     </div>
-    <div class="flex flex-col justify-between lg:grid lg:grid-cols-12 pb-2">
-        <div class="lg:col-span-6 lg:pl-20">
-            <img class="" src="../../../assets/safaris/sardegna2.jpg" alt="">
+    <div class="flex flex-col lg:flex-row justify-between mx-10">
+        <div class="">
+            <img class="lg:w-[400px] lg:h-[400px] xl:w-[600px] xl:h-[600px]" src="../../../assets/safaris/sardegna2.jpg" alt="">
         </div>
-        <div class=" bg-blue-100  h-[760px]  pt-4 pb-10 pl-6  md:pl-6 lg:pr-2 pr-4">
-            <p class="text-blue-600 text-2xl font-semibold font-serif pt-2">REQUEST A QUOTE</p>
-            <div class="flex flex-row gap-2">
-                <input class=" w-1/2 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Adults">
-                <input class=" w-1/2  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Children" >
-            </div>
-           
-              
-              <div class="mt-4 flex flex-col gap-0">
-                <p class=" text-xl font-normal" >Interested In</p>
-                <input class="mt-4 w-full md:w-2/3  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Choose excursion...">
-              </div>
-               
-    
-            <div class="mt-4 flex flex-col">
-                <p class=" text-xl font-normal">Departure Day</p>
-                <input class="mt-4   rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="date" name="departure" id="" placeholder="dd-mm-yyyy">
-  
-            </div>
-            <input class="mt-5  rounded-lg w-full md:w-2/3 focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Phone">
-            <input class="mt-4 w-full md:w-2/3 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="email" placeholder="Email">
-            <p class=" text-xl font-normal pt-4">Message</p>
-            <textarea class=" w-full h-20 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" name="message" id=""></textarea>
-  
-            <!-- <div class="flex items-center mb-4 mt-4 ">
-                <input id="default-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                <label for="default-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the treatment of my personal information</label>
-            </div> -->
-            <button type="button" class=" mt-4 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">REQUEST A QUOTE</button>
-           
-        </div>
+        <app-excursion-quotation></app-excursion-quotation>
     </div>
 </div>
 

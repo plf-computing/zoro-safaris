@@ -37,39 +37,7 @@
        
       </div>
       <div class="flex items-start flex-col lg:col-start-9 lg:col-span-4 ">
-        <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()"   class=" bg-slate-300  h-[760px]  pt-4 pb-10 pl-6 md:pl-6 lg:pr-2 pr-4">
-          <p class="text-yellow-800 text-2xl font-semibold font-serif pt-2">REQUEST A QUOTE</p>
-          <div class="flex flex-row gap-2">
-              <input id="adults" formControlName="adults" class=" w-1/2 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Adults">
-              <input id="children" formControlName="children" class=" w-1/2  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Children" >
-          </div>
-         
-            
-          <div class="mt-4 flex flex-col gap-0">
-            <p class="text-xl font-normal">Interested In</p>
-            <select formControlName="safari" class="mt-4 w-full md:w-2/3 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300">
-              <option value="" disabled selected>Choose safari</option> <!-- Placeholder option -->
-              <option *ngFor="let safari of allSafaris" [value]="safari.title2">{{safari.title}}:{{ safari.title2 }}</option>
-            </select>
-          </div>
-          
-          
-             
-  
-          <div class="mt-4 flex flex-col">
-              <p class=" text-xl font-normal">Departure Day</p>
-              <input id="departure" formControlName="departure" class="mt-4   rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="date" name="departure" id="" placeholder="dd-mm-yyyy">
-
-          </div>
-          <input id="phone" formControlName="phone" class="mt-5  rounded-lg w-full md:w-2/3 focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="Phone">
-          <input id="email" formControlName="email" class="mt-4 w-full md:w-2/3 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="email" placeholder="Email">
-          <p class=" text-xl font-normal pt-4">Message</p>
-          <textarea formControlName="message" class=" w-full h-20 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" name="message" id=""></textarea>
-
-        
-          <button type="submit" class=" mt-4 text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">REQUEST A QUOTE</button>
-         
-        </form>
+       <app-quotation></app-quotation>
       <div class=" hidden  mt-4 lg:flex lg:flex-col gap-4 ">
         <img *ngIf="getNumberOfImages() >= 1" class="" [src]="images[0]" alt="Safari Image">
         <img *ngIf="getNumberOfImages() >= 2" class="" [src]="images[1]" alt="Safari Image">
