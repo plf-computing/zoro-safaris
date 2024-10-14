@@ -1,1 +1,19 @@
-<p>book-now works!</p>
+<div class="mt-24 flex-col relative">
+   
+    <!-- First Section: Will Scroll Over the Fixed Second Section -->
+    <div class="relative z-30 flex flex-col lg:grid lg:grid-cols-12 pt-10">
+        <img class="object-cover lg:h-[760px] lg:col-span-6 lg:col-start-2 pr-4" src="../../assets/safari/mara.jpg" alt="">
+        <app-quotation class="lg:col-span-5 pr-4"/>
+    </div>
+
+    <!-- Second Div: Fixed Image in the Background -->
+    <div class="fixed inset-x-0 top-[400px]  h-[400px] z-10">
+        <img class="w-full h-full object-cover" src="../../assets/ffffff.jfif" alt="">
+    </div>
+
+    <!-- Third Section: Will Pass Over Both the First and Fixed Second Section -->
+    <div class="flex flex-col lg:grid lg:grid-cols-12 mt-[600px]  pb-2 relative z-40">
+        <app-excursion-quotation class="lg:col-span-5 lg:col-start-2"/>
+        <img class="object-cover lg:h-[760px] lg:col-span-6 lg:col-start-7 lg:pl-4" src="../../assets/safaris/IMG-20241013-WA0025.jpg" alt="">
+    </div>
+</div>

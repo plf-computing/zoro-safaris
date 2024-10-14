@@ -1,15 +1,19 @@
 
-<form [formGroup]="exForm" (ngSubmit)="onSubmit()"   class=" bg-slate-300  h-[760px]  pt-4 pb-10 pl-6 md:pl-6 lg:pr-2 pr-4">
-    <p class="text-yellow-800 text-2xl font-semibold font-serif pt-2">REQUEST A QUOTE</p>
+<form [formGroup]="exForm" (ngSubmit)="onSubmit()"   class=" bg-blue-400  h-[760px]  pt-4 pb-10 pl-6 md:pl-6 lg:pr-2 pr-4">
+    <p class="text-red-600 text-2xl font-semibold font-serif pt-2">REQUEST EXCURSION QUOTE</p>
     <div class="flex flex-row gap-2">
         <input id="adults" formControlName="adults" class=" w-1/2 rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Adults">
-        <div *ngIf="exForm.get('adults')?.invalid && (exForm.get('adults')?.touched || exForm.get('adults')?.dirty)" class="text-red-500 text-sm">
-          <p *ngIf="exForm.get('adults')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill this field</p>
-        </div>
+       
         <input id="children" formControlName="children" class=" w-1/2  rounded-lg  focus:ring-4 focus:outline-none focus:ring-blue-300" type="text" placeholder="No. of Children" >
-        <div *ngIf="exForm.get('children')?.invalid && (exForm.get('children')?.touched || exForm.get('children')?.dirty)" class="text-red-500 text-sm">
-          <p *ngIf="exForm.get('children')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill this field</p>
-        </div>
+       
+    </div>
+    <div class="flex flex-row">
+        <div *ngIf="exForm.get('adults')?.invalid && (exForm.get('adults')?.touched || exForm.get('adults')?.dirty)" class="text-red-500 text-sm">
+            <p *ngIf="exForm.get('adults')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill both fields</p>
+          </div>
+          <div *ngIf="exForm.get('children')?.invalid && (exForm.get('children')?.touched || exForm.get('children')?.dirty)" class="text-red-500 text-sm">
+            <p *ngIf="exForm.get('children')?.errors?.['required']"><i class="fa-solid fa-circle-exclamation fa-lg pr-1"></i>Please fill both fields</p>
+          </div>
     </div>
  
    
