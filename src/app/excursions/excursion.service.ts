@@ -38,7 +38,7 @@ export class ExcursionService {
       image:'../../../assets/safaris/gede.jpg',
       title:'GEDE RUINS -CRAB SHACK',
       duration:'ONE DAY TOUR',
-      description:'Gede ruins are the remains of a Swahili town, typical of most towns along the East African Coast. It traces its origin in the twelfth century.Visit The Crab Shackrun by Mida Creek Conservation Community. The ideal place for a romantic meal, a meal with friends and family, or just come to sit and ...',
+      description:'Gede ruins are the remains of a Swahili town, typical of most towns along the East African Coast. It traces its origin in the twelfth century.<br><br>Visit The Crab Shackrun by Mida Creek Conservation Community. The ideal place for a romantic meal, a meal with friends and family, or just come to sit and ...',
       type:'Cuisine | Nature'
     },
     {
