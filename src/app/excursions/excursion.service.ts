@@ -46,16 +46,16 @@ export class ExcursionService {
       image:'../../../assets/safaris/loveisland.jpg',
       title:'SARDEGNA 2',
       duration:'ONE DAY TOUR',
-      description:'Malindi Marine Park & Sardegna 2 Island Excursion. Book now. Spend a day exploring the white sands and crystal clear waters of Kenyas Northern ...',
+      description:'Malindi Marine Park & Sardegna 2 Island Excursion. Book now. Spend a day exploring the white sands and crystal clear waters of Kenya.',
       type:'Beach | Cuisine'
     },
    
     {
       id:4,
-      image:'../../../assets/safaris/lamu.jpg',
+      image:'../../../assets/safaris/loveisland2.jpg',
       title:'LOVE ISLAND',
       duration:'HALF DAY TOUR',
-      description:'Its famous bays known as Blue Lagoon, Watamu Beach, Ocean Breeze beach ... In most auspicious days one can walk to the island of love that emerges only at ....',
+      description:'Its famous bays known as Blue Lagoon, Watamu Beach, Ocean Breeze beach .In most auspicious days one can walk to the island of love.',
       type:'Beach'
     },
     {
@@ -71,7 +71,7 @@ export class ExcursionService {
       image:'../../../assets/safaris/vascodagama.jpg',
       title:'MALINDI TOUR',
       duration:'ONE DAY TOUR',
-      description:'Visit Malindi on this day tour to experience the hidden towns . Visit the Palace, shops, mosque and much more. Walk through the ...',
+      description:'Visit Malindi on this day tour to experience the hidden towns . Visit the Palace, shops, mosque and much more.',
       type:'Culture'
     },
     {
@@ -79,7 +79,7 @@ export class ExcursionService {
       image:'../../../assets/safaris/lamu.jpg',
       title:'LAMU ISLAND',
       duration:'OPTIONAL',
-      description:'Lamu is a place like no other, a peaceful tropical island where life is lived at its own relaxed rhythm, but a place whose history is as mysterious and fascinating ...',
+      description:'Lamu is a place like no other, a peaceful tropical island where life is lived at its own relaxed rhythm, but a place whose history is as mysterious and fascinating .',
       type:'Culture | Beach | Cuisine'
     },
     {
@@ -87,7 +87,7 @@ export class ExcursionService {
       image:'../../../assets/safaris/mombasa.jpg',
       title:'MOMBASA TOUR',
       duration:'OPTIONAL',
-      description:'Visit Fort Jesus, Portuguese fort built in 1593, being the second most important museum of Kenya. A walk through the old town will take you to the old port, still used by fishermen, meeting stylish Arabian...',
+      description:'Visit Fort Jesus, Portuguese fort built in 1593, being the second most important museum of Kenya. A walk through the old town will take you to the old port, still used by fishermen.',
       type:'Culture | Cuisine'
     },
     {
@@ -95,7 +95,7 @@ export class ExcursionService {
       image:'../../../assets/safaris/mambrui.jpg',
       title:'MAMBRUI TOUR',
       duration:'OPTIONAL',
-      description:'Along the characteristic road that takes you to Mambrui lined with numerous and huge baobabs, opens a view to the outfall of the Sabaki River, The beautiful sand dunes...',
+      description:'Along the characteristic road that takes you to Mambrui lined with numerous and huge baobabs, opens a view to the outfall of the Sabaki River, The beautiful sand dunes and ocean views.',
       type:'Nature'
     },
   
