@@ -5,11 +5,12 @@
         </a>
     </div>
   <div>
-    <ul  class="lg:flex  lg:items-center lg:space-x-10 lg:font-medium lg:text-xl hidden text-blue-900 cursor-pointer">
+    <ul  class="lg:flex  lg:items-center lg:space-x-5 xl:space-x-10 lg:font-medium lg:text-lg xl:text-xl hidden text-blue-900 cursor-pointer">
         <li routerLink="home" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">HOME</li>
         <li routerLink="safaris" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">SAFARIS & TOURS</li>
         <li routerLink="excursions" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">EXCURSIONS</li>
         <li routerLink="about-us" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">ABOUT US</li>
+        <li routerLink="tips" routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: false}" class="hover:text-red-600">TRAVEL TIPS</li>
     </ul>
     
   </div>
@@ -22,10 +23,11 @@
         <i class="fa-solid fa-xmark fa-2x p-2" [class.hidden]="!isMenuOpen"></i>
     </div>
     <div (click)="onLinkClick()">
-        <ul [class]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class=" cursor-pointer lg:hidden absolute left-0 top-16 bg-white w-full h-screen leading-[80px] mt-8 px-6 py-6 z-50 font-bold text-blue-700  text-xl">
-            
+        <ul [class]="{'hidden': !isMenuOpen, 'block': isMenuOpen}" class=" cursor-pointer lg:hidden absolute left-0 top-16 bg-white w-full h-screen leading-[70px] mt-8 px-6 py-6 z-50 font-bold text-blue-700  text-xl">
+            <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="home" class="hover:text-red-600">HOME</li>
             <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="safaris" class="hover:text-red-600">SAFARIS & TOURS</li>
             <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="excursions" class="hover:text-red-600">EXCURSIONS</li>
+            <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="tips" class="hover:text-red-600">TRAVEL TIPS</li>
             <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="about-us" class="hover:text-red-600">ABOUT US</li>
             <li routerLinkActive="text-red-600" [routerLinkActiveOptions]="{exact: true}" (click)="onLinkClick()" routerLink="book"> <button type="button" class="text-white bg-blue-900 hover:bg-blue-950 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-2xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Book Now</button></li>
         </ul>

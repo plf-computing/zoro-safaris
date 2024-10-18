@@ -6,6 +6,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { BookNowComponent } from './book-now/book-now.component';
 import { ExcursionDetailsComponent } from './excursions/excursion-details/excursion-details.component';
 import { SafarisDetailsComponent } from './safaris-tours/safaris-details/safaris-details.component';
+import { TravelTipsComponent } from './travel-tips/travel-tips.component';
 
 
 export const routes: Routes = [
@@ -31,6 +32,9 @@ export const routes: Routes = [
     },
     {
         path:'book',component:BookNowComponent
+    },
+    {
+        path:'tips',component:TravelTipsComponent
     }
     
     
