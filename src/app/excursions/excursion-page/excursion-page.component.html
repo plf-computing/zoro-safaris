@@ -1,7 +1,11 @@
 
-<div class=" w-full  mt-24 bg-blue-100">
+<div class=" w-full  mt-24 bg-blue-100 relative">
     <div class="flex justify-center items-center py-4">
-        <p class="font-spicy-rice-regular font-semibold  text-4xl md:text-5xl lg:text-6xl text-blue-900">ZORO EXCURSIONS</p>
+        <img class="w-full xl:h-[700px]  opacity-70" src="../../../assets/safaris/Diani.jpg" alt="">
+        <div class="absolute top-24 left-14 md:left-52 md:top-44 lg:top-64 lg:left-80 ">
+            <p class="font-spicy-rice-regular font-semibold  text-4xl md:text-5xl lg:text-6xl text-blue-900">ZORO EXCURSIONS</p>
+        </div>
+        
     </div>
 <div class=" flex flex-col flex-nowrap gap-4 justify between items-center pr-2 pl-2 pb-2 lg:grid lg:grid-cols-3  lg:px-6 lg:gap-4 lg:mt-4">
     @for (item of excursions; track item.id) {
