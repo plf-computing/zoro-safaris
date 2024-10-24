@@ -11,10 +11,11 @@ import { SafariBluComponent } from './home/safari-blu/safari-blu.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { NavComponent } from './nav/nav.component';
+import { SliderComponent } from "./home/slider/slider.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavComponent, HeroComponent, DiscoverComponent,PictureComponent,WhyComponent,SafarisComponent,SafariBluComponent,FooterComponent],
+  imports: [RouterOutlet, NavComponent, HeroComponent, DiscoverComponent, PictureComponent, WhyComponent, SafarisComponent, SafariBluComponent, FooterComponent, SliderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
